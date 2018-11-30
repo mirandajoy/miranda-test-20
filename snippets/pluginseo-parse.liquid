@@ -1,3 +1,4 @@
+
 {% comment %}
   ----------------------------------------------------------------------------------
    Plug in SEO Plus for Shopify
@@ -27,17 +28,11 @@
 
     {% if withFilters[0] contains 'current_tags' %}
       {% capture replaceWith %}{{ current_tags }}{% endcapture %}
-    {% elsif withFilters[0] contains 'current_page' %}
-      {% capture replaceWith %}{{ current_page }}{% endcapture %}
     {% else %}
       {% assign liquidVar = withFilters[0] | replace: '.', '%%%' | split: '%%%' %}
       {% assign entity = liquidVar[0] | strip %}
       {% assign var1 = liquidVar[1] | strip %}
-      {% if liquidVar.size == 4 %}
-		    {% assign var2 = liquidVar[2] | strip %}
-			  {% assign var3 = liquidVar[3] | strip %}
-		    {% assign replaceWith = [entity][var1][var2][var3] %}
-	    {% elsif liquidVar.size == 3 %}
+	    {% if liquidVar.size == 3 %}
 		    {% assign var2 = liquidVar[2] | strip %}
 		    {% assign replaceWith = [entity][var1][var2] %}
 	    {% else %}
