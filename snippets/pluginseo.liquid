@@ -1,21 +1,22 @@
 {% comment %}
-  version: 1.2.0
+  version: 1.7.0
 {% endcomment %}
 
 {%- comment -%}
   ----------------------------------------------------------------------------------
    Plug in SEO Plus for Shopify
 
-   Copyright (c) 2018 Pemberton Rank Ltd, a company registered in England 7341337
+   Copyright (c) 2019 Pemberton Rank Ltd, a company registered in England 7341337
 
    This file is subject to the license at https://www.pluginseo.com/eula
   ----------------------------------------------------------------------------------
 {%- endcomment -%}
 
-{%- assign licensedTo = 'e70536b5-f3bb-45da-b5b2-babe3cefa397' -%}
+{%- assign licensedTo = '2dc3318c-b11b-4f07-a8ec-683ec477cdad' -%}
 {%- assign pluginseoVerbose = false -%}
 {%- assign pageUnderscoreTitle = 'page' | append: '_' | append: 'title' -%}
 {%- assign pageUnderscoreDescription = 'page' | append: '_' | append: 'description' -%}
+{%- assign rootTemplate = template | split: '.' | first -%}
 
 {%- include 'pluginseo-langify' -%}
 {%- include 'pluginseo-page-title' -%}
